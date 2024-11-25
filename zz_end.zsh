@@ -1,7 +1,7 @@
 #
 # Unset and clean up any temporary variable, files, directories, etc. that were created during the execution of scripts in this directory.
 #
-# Print any closing messages or reminders to the console.
+# Print a summary of functions and aliases to the console (as well as any messages or reminders, if necessary).
 #
 
 unset -f add_alias

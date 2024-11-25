@@ -38,25 +38,17 @@ function find_proc() {
         return 1
     fi
     case $1 in
-        drive)
-            lsof | grep $2
-            ;;
         port)
             lsof -i :$2
-            ;;
-        file)
-            lsof | grep $2
-            ;;
-        dir)
-            lsof | grep $2
             ;;
         net)
             lsof -i $2
             ;;
+        drive|file|dir)
+            lsof | grep $2
+            ;;
         *)
-            echo "Invalid type: $1"
-            echo "----------------------------------------"
-            echo "Types: drive, port, file, dir, net"
+            echo "Usage: $0 <drive|port|file|dir|net> <pattern>"
             return 1
             ;;
     esac
