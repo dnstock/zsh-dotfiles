@@ -1,0 +1,3 @@
+Use this `/archive` directory to store all custom scripts that are inactive and should not be loaded by ZSH.
+
+Note: This directory was created by me (dnstock) and isn't part of the oh-my-zsh package.
