@@ -7,3 +7,6 @@ log/
 # editor configs
 .vscode
 .idea
+
+# personal project scripts
+zz_project*
