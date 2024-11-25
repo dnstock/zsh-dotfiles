@@ -1,42 +1,110 @@
 # Custom Shell Scripts and Aliases
 
-This is a collection of helpful shell scripts and aliases that I've created to enhance your command-line experience.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Shell](https://img.shields.io/badge/shell-zsh-green.svg)
+
+A collection of productivity-boosting shell aliases and functions to enhance your command-line experience, with focus on:
+- File system navigation
+- Network operations
+- System maintenance
+- Development workflows
+
+## Features
+
+- 🚀 Smart aliases with documentation
+- 🔍 Built-in help system (`alias_info`)
+- 🛠 System maintenance utilities
+- 🌐 Network troubleshooting tools
+- 📁 Enhanced file operations
+- 💻 Development workflow helpers
+
+## Prerequisites
+
+- ZSH shell
+- [LSD](https://github.com/lsd-rs/lsd) for enhanced file listing (optional)
+
+Install LSD:
+```bash
+    brew install lsd
+```
 
 ## Installation
 
 ### Oh My Zsh Users
 
-If you're using [Oh My Zsh](https://ohmyz.sh/), simply place these files in your `~/.oh-my-zsh/custom/` directory, and you're all set:
-
+Clone and copy to custom directory:
 ```bash
-cp -r * ~/.oh-my-zsh/custom/
+    git clone https://github.com/yourusername/repo-name.git
+    cp -r repo-name/* ~/.oh-my-zsh/custom/
 ```
 
-### Zsh Users Without Oh My Zsh
+### Standard ZSH Users
 
-For those using Zsh without Oh My Zsh, this code should work unmodified. Just source it in your `.zshrc` or `.zsh_profile` file:
-
+Clone and source in your .zshrc:
 ```bash
-source /path/to/your/script.zsh
+    git clone https://github.com/yourusername/repo-name.git
+    echo "source ~/path/to/repo-name/*.zsh" >> ~/.zshrc
 ```
 
 ### Bash and Other Shell Users
+The scripts should function correctly with minor modifications:
+- Replace `typeset` with `declare` (for Bash)
+- Adjust array syntax where needed
 
-If you're using Bash or another shell, minor code adjustments might be necessary (such as changing `typeset` to `declare`). After making these changes, the scripts should function correctly.
+## Usage
 
-## Other Dependencies
+### List Available Commands
 
-A few aliases depend on the `lsd` package. Alternate versions are also provided which use the classic `ls` command if you prefer.
-
-You can install it with Homebrew:
+View available aliases or function:
 ```bash
-brew install lsd
+    alias_info --help
+    function_info --help
 ```
+
+View all aliases or functions:
+```bash
+    alias_info --all
+    function_info --all
+```
+
+View specific alias or functions:
+```bash
+    alias_info netinfo
+    function_info find_proc
+```
+
+### Example Aliases
+
+    ll      # Enhanced directory listing
+    netinfo # Show network interface details
+    tree    # Display directory structure
+
+## Structure
+
+    .
+    ├── 0_init.zsh         # Core declarations
+    ├── 1_aliases.zsh      # General aliases
+    ├── 2_functions.zsh    # General functions
+    ├── [...]              # Scope-specific scripts
+    └── zz_end.zsh         # Clean up and summarize
+
+Script files get processed in alphabetical order.
 
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
 
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -am 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ## License
 
-This code is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Oh My Zsh](https://ohmyz.sh/) for inspiration and compatibility
+- [LSD](https://github.com/lsd-rs/lsd) for enhanced file listing
