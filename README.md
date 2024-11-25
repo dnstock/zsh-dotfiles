@@ -11,8 +11,8 @@ A collection of productivity-boosting shell aliases and functions to enhance you
 
 ## Features
 
-- 🚀 Smart aliases with documentation
-- 🔍 Built-in help system (`alias_info`)
+- 🚀 Smart functions and aliases with documentation
+- 🔍 Built-in help system (`function_info`, `alias_info`)
 - 🛠 System maintenance utilities
 - 🌐 Network troubleshooting tools
 - 📁 Enhanced file operations
