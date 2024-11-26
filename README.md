@@ -44,18 +44,18 @@ If an existing configuration is detected, it will not be overwritten. Please del
 
 ### Oh My Zsh Users
 
-Clone and copy to custom directory:
+Clone into custom directory:
 ```bash
-    git clone https://github.com/yourusername/repo-name.git
-    cp -r repo-name/* ~/.oh-my-zsh/custom/
+    cd ~/.oh-my-zsh/custom/
+    git clone https://github.com/dnstock/zsh-dotfiles.git .
 ```
 
 ### Standard ZSH Users
 
 Clone and source in your .zshrc:
 ```bash
-    git clone https://github.com/yourusername/repo-name.git
-    echo "source ~/path/to/repo-name/*.zsh" >> ~/.zshrc
+    git clone https://github.com/dnstock/zsh-dotfiles.git
+    echo "source ./zsh-dotfiles/*.zsh" >> ~/.zshrc
 ```
 
 ### Bash and Other Shell Users
