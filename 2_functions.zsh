@@ -2,7 +2,7 @@
 # General-use personal shell functions
 #
 
-add_function force_eject "Force eject a disk by unmounting it first"
+_add_function force_eject "Force eject a disk by unmounting it first"
 function force_eject() {
     if [ -z "$1" ]; then
         echo "Usage: forceEject <disk>"
@@ -24,7 +24,7 @@ function force_eject() {
     diskutil eject $1
 }
 
-add_function find_proc "Find processes using a drive, port, file, directory, or network connection"
+_add_function find_proc "Find processes using a drive, port, file, directory, or network connection"
 function find_proc() {
     if [ -z "$1" ] || [ -z "$2" ]; then
         echo "Usage: findProc <type> <string>"

@@ -1,11 +1,15 @@
 #
-# Initialize custom variables and functions for use in other scripts in this directory.
+# This file is sourced at the start of the shell startup process.
 #
 # NOTE: Private functions and variables in
 #       the global scope should be prefixed
 #       with __myzsh_ to avoid conflicts with
 #       other scripts.
-#
+
+# Set absolute path of the working directory (Zsh-specific)
+# - This handles sourcing, relative paths, and symlinks consistently
+# - Do not use $0 as it may not work as expected in all cases
+typeset -r __myzsh_path="$(cd -- "$(dirname -- "${(%):-%x}")" && pwd)"
 
 typeset -A __myzsh_aliases_info_cmd
 typeset -A __myzsh_aliases_info_desc
@@ -14,7 +18,17 @@ typeset -A __myzsh_functions_info_desc
 typeset -a __myzsh_aliases
 typeset -a __myzsh_functions
 
-add_alias() {
+# Check if a function exists
+_function_exists() {
+    command -v "$1" &>/dev/null
+}
+
+# Check if a file exists
+_file_exists() {
+    [[ -e "$1" || -L "$1" ]]  # -L is necessary in Zsh (not in Bash)
+}
+
+_add_alias() {
     local name=$1
     local cmd=$2
     local description=$3
@@ -50,7 +64,7 @@ alias_info() {
     fi
 }
 
-add_function() {
+_add_function() {
     local name=$1
     local description=$2
     __myzsh_functions+=($name)

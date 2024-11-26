@@ -4,11 +4,11 @@
 
 export PATH="/usr/local/sbin:$PATH"
 
-add_alias brewup "brew update; brew cleanup; echo '==> Outdated brews:'; brew outdated --verbose; echo '==> Outdated casks:'; brew outdated --cask --verbose" "Update homebrew and list outdated packages"
-add_alias brewupd "brewup; echo '==> Doctor Brew:'; brew doctor" "Update homebrew, list outdated packages, and run brew doctor"
+_add_alias brewup "brew update; brew cleanup; echo '==> Outdated brews:'; brew outdated --verbose; echo '==> Outdated casks:'; brew outdated --cask --verbose" "Update homebrew and list outdated packages"
+_add_alias brewupd "brewup; echo '==> Doctor Brew:'; brew doctor" "Update homebrew, list outdated packages, and run brew doctor"
 # fix cask: brew uninstall --force brew-cask; brew update
 
-add_alias brewserv "brew services" "Manage homebrew services"
+_add_alias brewserv "brew services" "Manage homebrew services"
 
 cdbrew() {
     # For formulae
@@ -20,4 +20,4 @@ cdbrew() {
     echo "cd $DIR"
     cd $DIR
 }
-add_function cdbrew "Change to install dir of any Homebrew package (ex: cd_brew mysql = cd /usr/local/opt/mysql)"
+_add_function cdbrew "Change to install dir of any Homebrew package (ex: cd_brew mysql = cd /usr/local/opt/mysql)"
