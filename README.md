@@ -23,10 +23,22 @@ A collection of productivity-boosting shell aliases and functions to enhance you
 - ZSH shell
 - [LSD](https://github.com/lsd-rs/lsd) for enhanced file listing (optional)
 
-Install LSD:
+### LSD Installation
 ```bash
     brew install lsd
 ```
+
+### LSD Configuration
+An `lsd_config.yaml` file can be used to manage configuration from within this repository.
+
+Create a configuration file from the included example file:
+```
+cp lsd_config.example.yaml lsd_config.yaml
+```
+
+When LSD is detected, this configuration will be automatically symlinked to `~/.config/lsd/config.yaml`.
+
+If an existing configuration is detected, it will not be overwritten. Please delete the existing `config.yaml` file if you prefer to use `lsd_config.yaml`.
 
 ## Installation
 
@@ -49,6 +61,7 @@ Clone and source in your .zshrc:
 ### Bash and Other Shell Users
 The scripts should function correctly with minor modifications:
 - Replace `typeset` with `declare` (for Bash)
+- Adjust code blocks marked Zsh-specific
 - Adjust array syntax where needed
 
 ## Usage
@@ -85,6 +98,7 @@ View specific alias or functions:
     ├── 0_init.zsh         # Core declarations
     ├── 1_aliases.zsh      # General aliases
     ├── 2_functions.zsh    # General functions
+    ├── lsd_config.yaml    # LSD configuration (optional)
     ├── [...]              # Scope-specific scripts
     └── zz_end.zsh         # Clean up and summarize
 

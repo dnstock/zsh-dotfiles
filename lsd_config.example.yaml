@@ -1,0 +1,14 @@
+# Description: Configuration file for the LSD plugin
+#
+# Manage LSD configuration from within the dotfiles repository.
+# This file will be symlinked to ~/.config/lsd/config.yaml, and loaded by LSD.
+#
+# NOTE:
+#   If a config file already existed, it will not be overwritten.
+#   Please delete the existing file if you prefer to manage LSD with this script.
+#
+# Please see the README file for more information.
+
+# Uncomment the lines below to hide file and directory icons
+# icons:
+#   when: never

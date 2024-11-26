@@ -8,5 +8,8 @@ log/
 .vscode
 .idea
 
+# non-example files
+lsd_config.yaml
+
 # personal project scripts
 zz_project*

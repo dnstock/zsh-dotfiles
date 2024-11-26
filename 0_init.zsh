@@ -28,6 +28,26 @@ _file_exists() {
     [[ -e "$1" || -L "$1" ]]  # -L is necessary in Zsh (not in Bash)
 }
 
+_lsd_note=""
+__init_lsd_config() {
+    local source_file="$__myzsh_path/lsd_config.yaml"
+    local linked_file="$HOME/.config/lsd/config.yaml"
+    # Symlink the LSD configuration if a config.yaml file does not already exist
+    if _function_exists lsd && _file_exists "$source_file"; then
+        if ! _file_exists "$linked_file"; then
+            mkdir -p "$(dirname "$linked_file")"
+            ln -s "$source_file" "$linked_file"
+            _lsd_note="(lsd config symlink created)"
+        elif [[ ! -L "$linked_file" ]]; then
+            _lsd_note="(lsd config NOT symlinked)"
+        fi
+    elif ! _function_exists lsd; then
+        _lsd_note="(lsd not detected, \`brew install lsd\`)"
+    fi
+}
+__init_lsd_config
+unset -f __init_lsd_config
+
 _add_alias() {
     local name=$1
     local cmd=$2

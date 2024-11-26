@@ -6,11 +6,21 @@
 # Filesystem Operations
 #----------------------------------------------
 
-_add_alias ll 'lsd -la' 'List files (using lsd) in long format, including hidden files'
-_add_alias ll0 'ls -lah' 'List files (using ls) in long format, including hidden files'
-_add_alias lls 'lsd -la | grep -i' 'Lists files (using lsd) containing a string (case-sensitive)'
-_add_alias lls0 'll -d' 'Lists files (using ls) containing a string (note: will NOT list hidden files/directories)'
-_add_alias tree 'lsd --tree --depth 2' 'Display directory structure'
+# Use lsd if available
+if _function_exists lsd; then
+    _add_alias ll 'lsd -la' 'List files in long format, including hidden files (using lsd)'
+    _add_alias lls 'lsd -la | egrep -i' 'Lists files and directories containing a string, case-insensitive (using lsd)'
+    _add_alias tree 'lsd --tree --depth 2' 'Display directory structure of current path two levels deep (using lsd)'
+    # Non-lsd options
+    _add_alias ll0 'ls -lah' 'List files in long format, including hidden files (using ls)'
+    _add_alias lls0 'ls -lah | grep -i' 'Lists files and directories containing a string, case-insensitive (using ls)'
+else
+    _add_alias ll 'ls -lah' 'List files in long format, including hidden files'
+    _add_alias lls 'ls -lah | grep -i' 'Lists files containing a string (case-insensitive)'
+    if _function_exists tree; then
+        _add_alias tree 'tree -L 2' 'Display directory structure of current path two levels deep'
+    fi
+fi
 
 #----------------------------------------------
 # System Operations
