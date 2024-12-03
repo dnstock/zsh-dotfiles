@@ -49,3 +49,9 @@ _add_alias netcons 'lsof -i -n -P | grep ESTABLISHED' 'List all established netw
 _add_alias netcons0 'netstat -an' 'List all network connections (using netstat)'
 _add_alias lsports 'lsof -i -n -P | grep TCP' 'List all open TCP ports'
 _add_alias pcurl 'curl --proxy localhost:8888' 'Curl with proxy set to localhost:8888'
+
+#----------------------------------------------
+# Misc Operations
+#----------------------------------------------
+
+_add_alias ohmycode 'cd ~/.oh-my-zsh/custom && code .' 'Change to Oh My Zsh custom directory and open in Visual Studio Code'
