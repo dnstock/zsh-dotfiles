@@ -20,4 +20,4 @@ cdbrew() {
     echo "cd $DIR"
     cd $DIR
 }
-_add_function cdbrew "Change to install dir of any Homebrew package (ex: cd_brew mysql = cd /usr/local/opt/mysql)"
+_add_function cdbrew "Change to install dir of any Homebrew package (ex: cdbrew mysql = cd /usr/local/opt/mysql)"
