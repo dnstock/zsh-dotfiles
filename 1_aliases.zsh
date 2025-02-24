@@ -54,4 +54,5 @@ _add_alias pcurl 'curl --proxy localhost:8888' 'Curl with proxy set to localhost
 # Misc Operations
 #----------------------------------------------
 
-_add_alias ohmycode 'cd ~/.oh-my-zsh/custom && code .' 'Change to Oh My Zsh custom directory and open in Visual Studio Code'
+_add_alias cdzh 'cd ~/.oh-my-zsh/custom' 'Change to Oh My Zsh custom directory'
+_add_alias codezh 'cdzh && code .' 'Change to Oh My Zsh custom directory and open in Visual Studio Code'
