@@ -40,14 +40,14 @@ If an existing configuration is detected, it will not be overwritten. Please del
 
 ## Installation
 
-### Oh My Zsh Users
+### Oh My Zsh (preferred)
 
 Clone into custom directory:
 ```bash
     git clone https://github.com/dnstock/zsh-dotfiles.git ~/.oh-my-zsh/custom/
 ```
 
-### Standard ZSH Users
+### Standard ZSH
 
 Though Oh My Zsh is preferred, you can also clone and source in your .zshrc:
 ```bash
@@ -55,7 +55,7 @@ Though Oh My Zsh is preferred, you can also clone and source in your .zshrc:
     echo "source ./zsh-dotfiles/*.zsh" >> ~/.zshrc
 ```
 
-### Bash and Other Shell Users
+### Bash and Other Shells
 The scripts should function correctly with minor modifications:
 - Replace `typeset` with `declare` (for Bash)
 - Adjust code blocks marked Zsh-specific
