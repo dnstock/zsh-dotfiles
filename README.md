@@ -3,25 +3,23 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Shell](https://img.shields.io/badge/shell-zsh-green.svg)
 
-A collection of productivity-boosting shell aliases and functions to enhance your command-line experience, with focus on:
+### Starter Collection
+
+This repo provides a collection of helpful custom aliases and functions for the ZSH shell and Oh My Zsh, including:
+
 - File system navigation
 - Network operations
 - System maintenance
+- Homebrew helpers
 - Development workflows
 
-## Features
+### Extensible Framework
 
-- 🚀 Smart functions and aliases with documentation
-- 🔍 Built-in help system (`function_info`, `alias_info`)
-- 🛠 System maintenance utilities
-- 🌐 Network troubleshooting tools
-- 📁 Enhanced file operations
-- 💻 Development workflow helpers
+It also creates a framework to add new custom functions and aliases (`_add_function`, `_add_alias`) with built-in documentation (`function_info`, `alias_info`), and plays nicely with the global namespace.
 
-## Prerequisites
+## Optional Prerequisite
 
-- ZSH shell
-- [LSD](https://github.com/lsd-rs/lsd) for enhanced file listing (optional)
+Installing [LSD](https://github.com/lsd-rs/lsd) is optional. It will be used to further enhance file listing.
 
 ### LSD Installation
 ```bash
@@ -117,8 +115,3 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Oh My Zsh](https://ohmyz.sh/) for inspiration and compatibility
-- [LSD](https://github.com/lsd-rs/lsd) for enhanced file listing
