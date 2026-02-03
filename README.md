@@ -10,7 +10,7 @@ This repo provides a collection of helpful custom aliases and functions for the 
 - File system navigation
 - Network operations
 - System maintenance
-- Homebrew helpers
+- [Homebrew](https://brew.sh/) helpers
 - Development workflows
 
 ### Extensible Framework
@@ -49,7 +49,7 @@ Clone into custom directory:
 
 ### Standard ZSH
 
-Though Oh My Zsh is preferred, you can also clone and source in your .zshrc:
+Though [Oh My Zsh](https://ohmyz.sh/) is preferred, you can also clone and source in your .zshrc:
 ```bash
     git clone https://github.com/dnstock/zsh-dotfiles.git
     echo "source ./zsh-dotfiles/*.zsh" >> ~/.zshrc
