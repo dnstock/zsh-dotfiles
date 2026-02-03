@@ -44,8 +44,7 @@ If an existing configuration is detected, it will not be overwritten. Please del
 
 Clone into custom directory:
 ```bash
-    cd ~/.oh-my-zsh/custom/
-    git clone https://github.com/dnstock/zsh-dotfiles.git .
+    git clone https://github.com/dnstock/zsh-dotfiles.git ~/.oh-my-zsh/custom/
 ```
 
 ### Standard ZSH Users
