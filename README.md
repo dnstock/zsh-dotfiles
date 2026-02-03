@@ -17,27 +17,6 @@ This repo provides a collection of helpful custom aliases and functions for the 
 
 It also creates a framework to add new custom functions and aliases (`_add_function`, `_add_alias`) with built-in documentation (`function_info`, `alias_info`), and plays nicely with the global namespace.
 
-## Optional Prerequisite
-
-Installing [LSD](https://github.com/lsd-rs/lsd) is optional. It will be used to further enhance file listing.
-
-### LSD Installation
-```bash
-    brew install lsd
-```
-
-### LSD Configuration
-An `lsd_config.yaml` file can be used to manage configuration from within this repository.
-
-Create a configuration file from the included example file:
-```
-cp lsd_config.example.yaml lsd_config.yaml
-```
-
-When LSD is detected, this configuration will be automatically symlinked to `~/.config/lsd/config.yaml`.
-
-If an existing configuration is detected, it will not be overwritten. Please delete the existing `config.yaml` file if you prefer to use `lsd_config.yaml`.
-
 ## Installation
 
 ### Oh My Zsh (preferred)
@@ -60,6 +39,27 @@ The scripts should function correctly with minor modifications:
 - Replace `typeset` with `declare` (for Bash)
 - Adjust code blocks marked Zsh-specific
 - Adjust array syntax where needed
+
+## Optional Addition
+
+[LSD](https://github.com/lsd-rs/lsd) is optional. If installed, it will be used to further enhance file listing.
+
+### LSD Installation
+```bash
+    brew install lsd
+```
+
+### LSD Configuration
+An `lsd_config.yaml` file can be used to manage configuration from within this repository.
+
+Create a configuration file from the included example file:
+```
+cp lsd_config.example.yaml lsd_config.yaml
+```
+
+When LSD is detected, this configuration will be automatically symlinked to `~/.config/lsd/config.yaml`.
+
+If an existing configuration is detected, it will not be overwritten. Please delete the existing `config.yaml` file if you prefer to use `lsd_config.yaml`.
 
 ## Usage
 
