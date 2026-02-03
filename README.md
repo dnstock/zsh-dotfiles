@@ -49,7 +49,7 @@ Clone into custom directory:
 
 ### Standard ZSH Users
 
-Clone and source in your .zshrc:
+Though Oh My Zsh is preferred, you can also clone and source in your .zshrc:
 ```bash
     git clone https://github.com/dnstock/zsh-dotfiles.git
     echo "source ./zsh-dotfiles/*.zsh" >> ~/.zshrc
