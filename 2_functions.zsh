@@ -3,6 +3,16 @@
 #
 
 _add_function force_eject "Force eject a disk by unmounting it first"
+_add_function ver "Get the installed version of a specific application"
+function ver() {
+    if [ -z "$1" ]; then
+        echo "Usage: ver <Application Name>"
+        echo "Example: ver Safari"
+        return 1
+    fi
+    mdls -name kMDItemVersion /Applications/"$1".app
+}
+
 # NOTE: Upon process termination, caffeinate will automatically stop, returning the system to its normal sleep behavior.
 _add_function nosleep "Prevent the system from sleeping while a specified process or application is running"
 function nosleep() {
