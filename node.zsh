@@ -1,5 +1,5 @@
 #
-# Node specific scripts and aliases
+# Node-specific scripts and aliases
 #
 
 # Automatically load a node version when it finds a .nvmrc file

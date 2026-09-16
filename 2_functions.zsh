@@ -2,7 +2,6 @@
 # General-use personal shell functions
 #
 
-_add_function force_eject "Force eject a disk by unmounting it first"
 _add_function ver "Get the installed version of a specific application"
 function ver() {
     if [ -z "$1" ]; then
@@ -34,6 +33,7 @@ function nosleep() {
     fi
 }
 
+_add_function force_eject "Force-eject a disk by unmounting it first"
 function force_eject() {
     if [ -z "$1" ]; then
         echo "Usage: forceEject <disk>"

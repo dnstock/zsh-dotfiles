@@ -1,5 +1,5 @@
 #
-# Git specific scripts and aliases (aside from oh-my-zsh git plugin)
+# Git-specific scripts and aliases (aside from oh-my-zsh git plugin)
 #
 
 # Aliases to add to the .gitconfig file (e.g. 'git co' => 'git checkout')

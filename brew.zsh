@@ -1,5 +1,5 @@
 #
-# Homebrew specific scripts and aliases
+# Homebrew-specific scripts and aliases
 #
 
 export PATH="/usr/local/sbin:$PATH"
