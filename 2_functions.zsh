@@ -3,6 +3,27 @@
 #
 
 _add_function force_eject "Force eject a disk by unmounting it first"
+# NOTE: Upon process termination, caffeinate will automatically stop, returning the system to its normal sleep behavior.
+_add_function nosleep "Prevent the system from sleeping while a specified process or application is running"
+function nosleep() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: nosleep <process_name>"
+        echo "Example: nosleep Music"
+        return 1
+    fi
+    # Fetch the PID for the specified process name
+    local pid=$(pgrep -x "$1" | head -n 1)
+    if [[ -n "$pid" ]]; then
+        # Launch caffeinate disowned from zsh job control
+        { caffeinate -d -i -m -s -w "$pid" >/dev/null 2>&1 } &!
+        echo "Preventing system sleep while $1 is running (PID: $pid)"
+        echo "=> run 'pgrep caffeinate' to terminate manually"
+    else
+        echo "$1 is not running. Please start the process first."
+        return 1
+    fi
+}
+
 function force_eject() {
     if [ -z "$1" ]; then
         echo "Usage: forceEject <disk>"

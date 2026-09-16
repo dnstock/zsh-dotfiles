@@ -32,6 +32,7 @@ _add_alias flushdns0 'sudo killall -HUP mDNSResponder; sudo killall mDNSResponde
 _add_alias diskspace 'df -h' 'Show disk space usage for all mounted volumes'
 _add_alias disklist 'diskutil list' 'List all disks and partitions'
 _add_alias mounts 'df -h && echo "\nDetailed mounts:" && mount | column -t' 'List all mounted volumes with disk usage information'
+_add_alias ls_nosleep 'pmset -g assertions | grep caffeinate' 'Check if caffeinate is running and preventing system sleep'
 
 #----------------------------------------------
 # Hardware Information
@@ -56,3 +57,8 @@ _add_alias pcurl 'curl --proxy localhost:8888' 'Curl with proxy set to localhost
 
 _add_alias cdzh 'cd ~/.oh-my-zsh/custom' 'Change to Oh My Zsh custom directory'
 _add_alias codezh 'cdzh && code .' 'Change to Oh My Zsh custom directory and open in Visual Studio Code'
+
+#----------------------------------------------
+# Usability Enhancements
+#----------------------------------------------
+_add_alias musicon 'nosleep Music' 'Prevent system sleep while Music app is running'
