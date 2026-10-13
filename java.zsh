@@ -1,5 +1,5 @@
 #
-# Java-specific scripts and aliases
+# Java-specific scripts, functions and aliases
 #
 _add_alias jv "java -version" "Show current Java version"
 _add_alias jdk_version "sdk current java" "Show current Java version with SDKMAN"

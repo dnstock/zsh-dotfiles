@@ -1,5 +1,5 @@
 #
-# VSCode-specific scripts and aliases
+# VSCode-specific scripts, functions and aliases
 #
 
 # Check if VSC Insiders is installed

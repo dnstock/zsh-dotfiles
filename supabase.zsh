@@ -1,5 +1,5 @@
 #
-# Supabase-specific scripts and aliases
+# Supabase-specific scripts, functions and aliases
 #
 
 # Per notice: https://supabase.com/docs/guides/local-development
