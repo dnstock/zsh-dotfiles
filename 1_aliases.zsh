@@ -27,6 +27,7 @@ fi
 #----------------------------------------------
 
 _add_alias killfinder 'killall Finder' 'Relaunch Finder (releases drive and file locks)'
+_add_alias zshreload 'exec zsh' 'Reloads the current zsh shell'
 _add_alias flushdns 'sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder' 'Flushes the DNS cache (using dscacheutil)'
 _add_alias flushdns0 'sudo killall -HUP mDNSResponder; sudo killall mDNSResponderHelper; sudo dscacheutil -flushcache' 'Flushes the DNS cache (using killall)'
 _add_alias diskspace 'df -h' 'Show disk space usage for all mounted volumes'
